@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Huffman Text Compression</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Huffman Text Compression</h1>
+
+        <p class="subtitle">
+            Lossless text compression using Huffman Coding
+        </p>
+
+        <!-- INPUT -->
+        <div class="input-box">
+
+            <h2>Enter Your Text</h2>
+
+            <textarea id="textInput"
+                placeholder="Type your text here..."></textarea>
+
+            <div class="buttons">
+
+                <button onclick="compressText()">
+                    Compress
+                </button>
+
+                <button onclick="startSpeech()">
+                    🎤 Speak
+                </button>
+
+                <button onclick="clearAll()">
+                    Clear
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- RESULT -->
+        <div id="result" class="result">
+
+            <h2>Compression Results</h2>
+
+            <div class="result-box">
+
+                <p>
+                    <strong>Original Text:</strong>
+                    <span id="originalText">-</span>
+                </p>
+
+                <p>
+                    <strong>Original Bits:</strong>
+                    <span id="originalBits">-</span>
+                </p>
+
+                <p>
+                    <strong>Compressed Bits:</strong>
+                    <span id="compressedBits">-</span>
+                </p>
+
+                <p>
+                    <strong>Compression Ratio:</strong>
+                    <span id="compressionRatio">-</span>
+                </p>
+
+                <p>
+                    <strong>Efficiency:</strong>
+                    <span id="efficiency">-</span>
+                </p>
+
+                <p>
+                    <strong>Encoded Data:</strong>
+                    <span id="encodedData">-</span>
+                </p>
+
+            </div>
+
+
+            <!-- FREQUENCY -->
+            <h2>Character Frequencies</h2>
+
+            <table id="frequencyTable">
+
+                <tr>
+                    <th>Character</th>
+                    <th>Frequency</th>
+                </tr>
+
+            </table>
+
+
+            <!-- HUFFMAN CODES -->
+            <h2>Huffman Codes</h2>
+
+            <table id="codeTable">
+
+                <tr>
+                    <th>Character</th>
+                    <th>Code</th>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
